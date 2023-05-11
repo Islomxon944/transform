@@ -28,6 +28,11 @@ img{
     height: auto;
 }
 
+*:focus{
+    outline: 2px dashed skyblue;
+    outline-offset: 3px;
+}
+
 
 /* CONTAINER */
 .container{
@@ -46,22 +51,43 @@ img{
     flex-grow: 1;
 }
 
-.box{
-    height: 757px;
-    background-color: lightcyan;
-    color: #fff;
+.devor{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 120px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    background-image: linear-gradient(
-        to right bottom,
-        yellow,
-        black
-    );
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    background-image: url(https://www.textures4photoshop.com/tex/thumbs/white-brick-wall-seamless-texture-free-thumb38.jpg);
 }
+
+.rom{
+    display: flex;
+    border: 20px ridge rgb(114, 114, 114);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.8);
+    background-image: url(https://businessofhome.com/system/ckeditor/pictures/21212/data/content/industrial.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.window{
+    width: 200px;
+    height: 400px;
+    border: 20px ridge rgb(114, 114, 114);
+    background-color: rgba(0,0,0,0.6);
+    transition: transform 0.80s ease;
+}
+
+.left-window{
+    transform-origin: left center;
+}
+.right-window{
+    transform-origin: right center;
+}
+.rom:hover .left-window{
+    transform: perspective(2000px) rotateY(-125deg);
+}
+.rom:hover .right-window{
+    transform: perspective(2000px) rotateY(125deg);
+}
+
+
+
